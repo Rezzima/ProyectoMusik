@@ -2,3 +2,7 @@
     width: 5rem;
     height: 5rem;
 }
+.nav-item-register {
+    border-color: black;
+    border-radius: 50px;
+}

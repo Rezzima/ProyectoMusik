@@ -1,0 +1,35 @@
+.contactFather {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh; /* ajusta la altura para que tenga espacio de sobra */
+}
+
+#formContact {
+    width: 100%;
+    max-width: 450px; /* Evita que los inputs se estiren por toda la pantalla */
+    padding: 20px;
+}
+
+.form-control {
+    border-radius: 50px;
+}
+
+p {
+    font-family: "Akira Expanded";
+    color: aliceblue;    
+}
+
+h1 {
+    font-family: 'Akira Expanded', sans-serif;
+}
+
+.Title {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.form-text {
+    opacity: 50%;
+}

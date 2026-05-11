@@ -1,4 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
 @import 'bootstrap/dist/css/bootstrap.min.css';
-@import 'bootswatch/dist/vapor/bootstrap.min.css';
+@import 'bootswatch/dist/lumen/bootstrap.min.css';
 @import url('https://fonts.cdnfonts.com/css/akira-expanded');
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+}

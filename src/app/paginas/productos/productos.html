@@ -1,1 +1,27 @@
-<p>productos works!</p>
+<div class="d-flex flex-wrap gap-2 cards">
+    <div class="row justify-content-center g-4" style="gap: 1rem">
+        @for (p of Productos;track p.id) {
+        @if (p.dispo) {
+        <div class="card" style="width: 18rem;">
+            <div class="card-body">
+                <img src="{{p.imagen}}" alt="placeholder">
+                <h5 class="card-title">{{ p.nombre }}</h5>
+                <p class="card-text">{{ p.descripcion }}</p>
+                <p class="card-text">${{ p.precio }}</p>
+                <div class="row justify-content-center gap-1">
+                    <a href="#" class="btn btn-primary">Comprar</a>
+                    <button type="button" (click)="toggleFavorito(p.id)"
+                        [class]="p.favorito ? 'btn btn-warning' : 'btn btn-outline-warning'">
+                        <i [class]="p.favorito ? 'bi bi-star-fill' : 'bi bi-star'"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        } @else {
+        <div class="card" style="width: 18rem;">
+            <p>Producto no disponible</p>
+        </div>
+        }
+        }
+    </div>
+</div>
