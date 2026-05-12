@@ -13,3 +13,13 @@ html, body {
   height: 100%;
   margin: 0;
 }
+
+h2 {
+    margin: 1rem;
+    font-family: 'Akira Expanded', sans-serif;
+}
+
+h3 {
+    margin: 1rem;
+    font-family: 'Akira Expanded', sans-serif;
+}
