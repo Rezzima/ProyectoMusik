@@ -1,6 +1,6 @@
 <div class="d-flex flex-wrap gap-2 cards">
     <div class="row justify-content-center g-4" style="gap: 1rem">
-        @for (p of lista();track p.id) {
+        @for (p of Prod;track p.id) {
         @if (p.dispo) {
         <div class="card" style="width: 18rem;">
             <div class="card-body">
@@ -10,10 +10,10 @@
                 <p class="card-text">${{ p.precio }}</p>
                 <div class="row justify-content-center gap-1">
                     <a href="#" class="btn btn-primary">Agregar al carrito</a>
-                    <button type="button" (click)="toggleFavorito(p.id)"
+                    <!-- <button type="button" (click)="toggleFavorito(p.id)"
                         [class]="p.favorito ? 'btn btn-warning' : 'btn btn-outline-warning'">
                         <i [class]="p.favorito ? 'bi bi-star-fill' : 'bi bi-star'"></i>
-                    </button>
+                    </button> -->
                 </div>
             </div>
         </div>

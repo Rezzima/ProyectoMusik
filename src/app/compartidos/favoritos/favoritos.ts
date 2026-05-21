@@ -1,5 +1,5 @@
-import { Component, inject, computed } from '@angular/core';
-import { Prod } from '../../servicios/prod';
+import { Component, inject } from '@angular/core';
+
 
 @Component({
   selector: 'app-favoritos',
@@ -8,14 +8,14 @@ import { Prod } from '../../servicios/prod';
   styleUrl: './favoritos.css',
 })
 export class Favoritos {
-  svc = inject(Prod);
+  // svc = inject(Prod);
 
-  // Filtra solo los productos con favorito: true
-  favoritos = computed(() =>
-    this.svc.productos().filter(p => p.favorito)
-  );
+  // // Filtra solo los productos con favorito: true
+  // favoritos = computed(() =>
+  //   this.svc.productos().filter(p => p.favorito)
+  // );
 
-  toggleFavorito(id: number) {
-    this.svc.toggleFavorito(id);
-  }
+  // toggleFavorito(id: number) {
+  //   this.svc.toggleFavorito(id);
+  // }
 }

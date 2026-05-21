@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { CarritoServices } from '../../servicios/carrito-services';
 
 @Component({
   selector: 'app-carrito',
@@ -6,4 +7,9 @@ import { Component } from '@angular/core';
   templateUrl: './carrito.html',
   styleUrl: './carrito.css',
 })
-export class Carrito {}
+export class Carrito {
+  svc = inject(CarritoServices)
+  
+  lista = this.svc.carritoArray
+
+}

@@ -1,1 +1,28 @@
-<p>carrito works!</p>
+<div class="containerTable">
+    <table class="table table-bordered">
+        <thead>
+            <th scope="col">Producto</th>
+            <th scope="col">Cantidad</th>
+            <th scope="col">Acciones</th>
+            <th scope="col">Precio</th>
+        </thead>
+        <tbody>
+            @for(p of lista(); track p.id) {
+                <tr>
+                    <td>{{ p.nombre }}</td>
+                    <td>${{ p.precio }}</td>
+                </tr>
+            }
+        </tbody>
+        <tfoot>
+            <tr>
+                <th scope="row" colspan="3">Precio Final</th>
+                <td>$30</td>
+            </tr>
+        </tfoot>
+    </table>
+    <div class="buttons">
+        <button class="btn btn-primary">Comprar</button>
+        <button class="btn btn-danger" style="margin-left: 5px;"><i class="bi bi-trash"></i></button>
+    </div>
+</div>
