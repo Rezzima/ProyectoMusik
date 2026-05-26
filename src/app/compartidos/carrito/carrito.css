@@ -1,8 +1,7 @@
-.containerTable{
+.containerTable {
     display: inline;
 }
 
-.buttons{
-    padding-right: 1rem;
-    justify-self: end;
+.buttons {
+    display: flex;
 }

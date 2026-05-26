@@ -1,5 +1,6 @@
-import { Component, inject } from '@angular/core';
-
+import { Component, OnInit } from '@angular/core';
+import { FavoritosServices } from '../../servicios/favoritos-services';
+import { Producto } from '../../models/producto';
 
 @Component({
   selector: 'app-favoritos',
@@ -7,15 +8,19 @@ import { Component, inject } from '@angular/core';
   templateUrl: './favoritos.html',
   styleUrl: './favoritos.css',
 })
-export class Favoritos {
-  // svc = inject(Prod);
+export class Favoritos implements OnInit {
+  arrayFavoritos: Producto[] = [];
 
-  // // Filtra solo los productos con favorito: true
-  // favoritos = computed(() =>
-  //   this.svc.productos().filter(p => p.favorito)
-  // );
+  constructor(
+    private favoritosArr: FavoritosServices
+  ){}
 
-  // toggleFavorito(id: number) {
-  //   this.svc.toggleFavorito(id);
-  // }
+  ngOnInit(){
+    this.arrayFavoritos = this.favoritosArr.obtenerFav();
+  }
+
+  agregarFav(favorito: boolean){
+    this.favoritosArr.agregarAFavoritos
+  }
+
 }

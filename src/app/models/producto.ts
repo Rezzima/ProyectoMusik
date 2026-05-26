@@ -8,4 +8,6 @@ export interface Producto{
     categoria: string;
     dispo: boolean;
     favorito: boolean;
+    cant: number;
+    total?: number;
 }

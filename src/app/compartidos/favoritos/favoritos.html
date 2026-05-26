@@ -1,4 +1,4 @@
-<!-- <div class="container mt-4">
+<div class="container mt-4">
     <h2>Mis Favoritos</h2>
 
     @if (favoritos().length === 0) {
@@ -13,15 +13,11 @@
                 <p class="card-text">{{ p.descripcion }}</p>
                 <p class="card-text">${{ p.precio }}</p>
                 <div class="row justify-content-center gap-1">
-                    <a href="#" class="btn btn-primary">Agregar al carrito</a>
-                    <button type="button" (click)="toggleFavorito(p.id)"
-                        [class]="p.favorito ? 'btn btn-warning' : 'btn btn-outline-warning'">
-                        <i [class]="p.favorito ? 'bi bi-star-fill' : 'bi bi-star'"></i>
-                    </button>
+                    
                 </div>
             </div>
         </div>
         }
     </div>
     }
-</div> -->
+</div>

@@ -2,16 +2,30 @@
     <table class="table table-bordered">
         <thead>
             <th scope="col">Producto</th>
-            <th scope="col">Cantidad</th>
-            <th scope="col">Acciones</th>
             <th scope="col">Precio</th>
+            <th scope="col">Acciones</th>
         </thead>
         <tbody>
-            @for(p of lista(); track p.id) {
-                <tr>
+            @for(p of productosEnCarrito; track p.id) {
+            <tr>
+                <th class="row"></th>
+                <div>
                     <td>{{ p.nombre }}</td>
-                    <td>${{ p.precio }}</td>
-                </tr>
+                </div>
+                <td>${{ p.precio*p.cant }}</td>
+                <div class="buttons">
+                    <button class="btn" (click)="disminuir(p.id)">
+                        -
+                    </button>
+                    <td>{{ p.cant }}</td>
+                    <button class="btn" (click)="aumentar(p.id)">
+                        +
+                    </button>
+                    <button class="btn btn-danger" style="margin-left: 5px;" (click)="eliminar(p.id)">
+                        <i class="bi bi-trash"></i>
+                    </button>
+                </div>
+            </tr>
             }
         </tbody>
         <tfoot>
@@ -21,8 +35,4 @@
             </tr>
         </tfoot>
     </table>
-    <div class="buttons">
-        <button class="btn btn-primary">Comprar</button>
-        <button class="btn btn-danger" style="margin-left: 5px;"><i class="bi bi-trash"></i></button>
-    </div>
 </div>

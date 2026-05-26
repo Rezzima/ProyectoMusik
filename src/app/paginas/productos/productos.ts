@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { Producto } from '../../../models/producto';
+import { Producto } from '../../models/producto';
+import { CarritoServices } from '../../servicios/carrito-services';
 
 @Component({
   selector: 'app-productos',
@@ -8,6 +9,10 @@ import { Producto } from '../../../models/producto';
   styleUrl: './productos.css',
 })
 export class Productos {
+constructor(
+  private carritoServicios: CarritoServices
+){}
+
 Prod: Producto[] = [
     {
       id: 1,
@@ -18,7 +23,8 @@ Prod: Producto[] = [
       imagen: "assets/amerikkkas.png",
       categoria: "Rap/Hip-Hop",
       dispo: true,
-      favorito: false
+      favorito: false,
+      cant: 0
     },
     {
       id: 2,
@@ -29,7 +35,8 @@ Prod: Producto[] = [
       imagen: "assets/illmatic.png",
       categoria: "Rap/Hip-Hop",
       dispo: true,
-      favorito: false
+      favorito: false,
+      cant: 0
     },
     {
       id: 3,
@@ -40,7 +47,8 @@ Prod: Producto[] = [
       imagen: "assets/rompelo_ahi.png",
       categoria: "Cumbia",
       dispo: true,
-      favorito: false
+      favorito: false,
+      cant: 0
     },
     {
       id: 4,
@@ -51,7 +59,8 @@ Prod: Producto[] = [
       imagen: "assets/kill_at_will.png",
       categoria: "Rap/Hip-Hop",
       dispo: true,
-      favorito: false
+      favorito: false,
+      cant: 0
     },
     {
       id: 5,
@@ -62,7 +71,8 @@ Prod: Producto[] = [
       imagen: "assets/caravana.png",
       categoria: "Rap/Hip-Hop",
       dispo: true,
-      favorito: false
+      favorito: false,
+      cant: 0
     },
     {
       id: 6,
@@ -73,13 +83,13 @@ Prod: Producto[] = [
       imagen: "assets/placeholder.png",
       categoria: "Rap/Hip-Hop",
       dispo: false,
-      favorito: false
+      favorito: false,
+      cant: 0
     },
   ];
   
-  // Función que alterna el estado favorito de un producto
-  // Recibe el 'id' del producto que se clickeó
-  // toggleFavorito(id: number) {
-  //   this.svc.toggleFavorito(id);
-  // }
+  agregarAlCarrito(p: Producto){
+    this.carritoServicios.agregarACarrito(p);
+  }
+
 }

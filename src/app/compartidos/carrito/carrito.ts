@@ -1,4 +1,5 @@
-import { Component, inject } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Producto } from '../../models/producto';
 import { CarritoServices } from '../../servicios/carrito-services';
 
 @Component({
@@ -7,9 +8,28 @@ import { CarritoServices } from '../../servicios/carrito-services';
   templateUrl: './carrito.html',
   styleUrl: './carrito.css',
 })
-export class Carrito {
-  svc = inject(CarritoServices)
-  
-  lista = this.svc.carritoArray
+export class Carrito implements OnInit {
+  productosEnCarrito: Producto[] = [];
+
+  constructor(
+    private carritoServ: CarritoServices
+  ){}
+
+  ngOnInit() {
+    this.productosEnCarrito = this.carritoServ.obtenerProd();
+  }
+
+  aumentar(id: number) {
+    this.carritoServ.aumentarCant(id);
+  }
+
+  disminuir(id: number) {
+    this.carritoServ.disminuirCant(id);
+  }
+
+  eliminar(id: number){
+    this.carritoServ.eliminarProd(id);
+    this.productosEnCarrito = this.carritoServ.obtenerProd();
+  }
 
 }
