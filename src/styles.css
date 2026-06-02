@@ -9,17 +9,23 @@ body {
   min-height: 100vh;
 }
 
-html, body {
+html,
+body {
   height: 100%;
   margin: 0;
 }
 
 h2 {
-    margin: 1rem;
-    font-family: 'Akira Expanded', sans-serif;
+  margin: 1rem;
+  font-family: 'Akira Expanded', sans-serif;
 }
 
 h3 {
-    margin: 1rem;
-    font-family: 'Akira Expanded', sans-serif;
+  margin: 1rem;
+  font-family: 'Akira Expanded', sans-serif;
+}
+
+.fuente {
+  margin: 1rem;
+  font-family: 'Akira Expanded', sans-serif;
 }

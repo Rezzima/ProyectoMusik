@@ -13,23 +13,41 @@ export class Carrito implements OnInit {
 
   constructor(
     private carritoServ: CarritoServices
-  ){}
+  ) { }
 
   ngOnInit() {
     this.productosEnCarrito = this.carritoServ.obtenerProd();
+    this.calculartotal();
+  }
+
+  total: number = 0
+
+  calculartotal() {
+    this.carritoServ.calcTotal();
+    this.total = this.carritoServ.total;
   }
 
   aumentar(id: number) {
     this.carritoServ.aumentarCant(id);
+    this.calculartotal();
   }
 
   disminuir(id: number) {
     this.carritoServ.disminuirCant(id);
+    this.calculartotal();
   }
 
-  eliminar(id: number){
+  eliminar(id: number) {
     this.carritoServ.eliminarProd(id);
     this.productosEnCarrito = this.carritoServ.obtenerProd();
+    this.calculartotal();
+  }
+
+  carritoComprar(){
+    alert("gracias por comprar")
+    this.carritoServ.comprarCarrito();
+    this.productosEnCarrito = this.carritoServ.obtenerProd();
+    this.total = 0;
   }
 
 }

@@ -1,19 +1,20 @@
 <div class="container mt-4">
     <h2>Mis Favoritos</h2>
 
-    @if (favoritos().length === 0) {
+    @if (arrayFavoritos.length === 0) {
     <p>No tenés productos favoritos todavía.</p>
     } @else {
     <div class="row justify-content-center g-4" style="gap: 1rem">
-        @for (p of favoritos(); track p.id) {
-        <div class="card" style="width: 18rem;">
+        @for (p of arrayFavoritos; track p.favorito) {
+        <div class="card" style="width: 18rem; margin: 1rem;">
             <div class="card-body">
                 <img src="{{p.imagen}}" alt="placeholder">
                 <h5 class="card-title">{{ p.nombre }}</h5>
                 <p class="card-text">{{ p.descripcion }}</p>
                 <p class="card-text">${{ p.precio }}</p>
                 <div class="row justify-content-center gap-1">
-                    
+                    <button class="btn btn-success" (click)="agregarCarrito(p)">Agregar al carrito</button>
+                    <button class="btn btn-danger" (click)="elimFav(p.id)">Eliminar Favorito</button>
                 </div>
             </div>
         </div>

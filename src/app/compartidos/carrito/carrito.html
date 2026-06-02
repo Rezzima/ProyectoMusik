@@ -13,12 +13,12 @@
                     <td>{{ p.nombre }}</td>
                 </div>
                 <td>${{ p.precio*p.cant }}</td>
-                <div class="buttons">
-                    <button class="btn" (click)="disminuir(p.id)">
+                <div class="buttons" style="margin: 5px;">
+                    <button class="btn btn-primary" (click)="disminuir(p.id)" style="margin: 5px;">
                         -
                     </button>
-                    <td>{{ p.cant }}</td>
-                    <button class="btn" (click)="aumentar(p.id)">
+                    <td class="fuente">{{ p.cant }}</td>
+                    <button class="btn btn-primary" (click)="aumentar(p.id)" style="margin: 5px;">
                         +
                     </button>
                     <button class="btn btn-danger" style="margin-left: 5px;" (click)="eliminar(p.id)">
@@ -31,7 +31,12 @@
         <tfoot>
             <tr>
                 <th scope="row" colspan="3">Precio Final</th>
-                <td>$30</td>
+                <td>{{ total }}</td>
+            </tr>
+            <tr>
+                <td colspan="4" style="text-align: right;">
+                    <button class="btn btn-success" (click)="carritoComprar()">comprar</button>
+                </td>
             </tr>
         </tfoot>
     </table>

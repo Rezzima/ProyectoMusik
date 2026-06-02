@@ -18,6 +18,13 @@ export class CarritoServices {
     }
   }
 
+  total: number = 0
+
+  calcTotal(){
+    this.total = 0;
+    this.carritoArray.forEach(p => (this.total += p.precio * p.cant));
+  }
+
   //Read
   obtenerProd() {
     return this.carritoArray;
@@ -40,6 +47,10 @@ export class CarritoServices {
 
   eliminarProd(id: number) {
     this.carritoArray = this.carritoArray.filter(p => p.id !== id);
+  }
+
+  comprarCarrito(){
+    this.carritoArray = [];
   }
 
 }
