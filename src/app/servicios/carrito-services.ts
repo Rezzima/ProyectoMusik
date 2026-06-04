@@ -14,13 +14,13 @@ export class CarritoServices {
       alert("Producto ya en el carrito");
     }
     else {
-      this.carritoArray.push({...p, cant: 1});
+      this.carritoArray.push({ ...p, cant: 1 });
     }
   }
 
   total: number = 0
 
-  calcTotal(){
+  calcTotal() {
     this.total = 0;
     this.carritoArray.forEach(p => (this.total += p.precio * p.cant));
   }
@@ -49,8 +49,22 @@ export class CarritoServices {
     this.carritoArray = this.carritoArray.filter(p => p.id !== id);
   }
 
-  comprarCarrito(){
-    this.carritoArray = [];
+  comprarCarrito() {
+    if (!this.carritoArray.length) {
+      alert("No hay nada en el carrito")
+    } else {
+      alert("Gracias por comprar")
+      this.carritoArray = [];
+    }
+  }
+
+  elimCarrito() {
+    if (!this.carritoArray.length) {
+      alert("No hay nada en el carrito")
+    } else {
+      alert("Se ha eliminado el carrito")
+      this.carritoArray = [];
+    }
   }
 
 }

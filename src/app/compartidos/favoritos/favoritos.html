@@ -8,7 +8,7 @@
         @for (p of arrayFavoritos; track p.favorito) {
         <div class="card" style="width: 18rem; margin: 1rem;">
             <div class="card-body">
-                <img src="{{p.imagen}}" alt="placeholder">
+                <img src="{{p.imagen}}" alt="{{p.alt}}">
                 <h5 class="card-title">{{ p.nombre }}</h5>
                 <p class="card-text">{{ p.descripcion }}</p>
                 <p class="card-text">${{ p.precio }}</p>

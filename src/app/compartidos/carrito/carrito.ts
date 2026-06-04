@@ -44,8 +44,13 @@ export class Carrito implements OnInit {
   }
 
   carritoComprar(){
-    alert("gracias por comprar")
     this.carritoServ.comprarCarrito();
+    this.productosEnCarrito = this.carritoServ.obtenerProd();
+    this.total = 0;
+  }
+
+  eliminarCarrito(){
+    this.carritoServ.elimCarrito();
     this.productosEnCarrito = this.carritoServ.obtenerProd();
     this.total = 0;
   }

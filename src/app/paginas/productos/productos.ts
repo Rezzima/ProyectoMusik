@@ -18,6 +18,7 @@ export class Productos {
     {
       id: 1,
       nombre: "AmeriKKKa's most wanted",
+      alt: "AmeriKKKasMostWanted_Cover",
       descripcion: "Album de estudio en solista del rapero estadounidense Ice Cube",
       precio: 23,
       stock: 150,
@@ -30,6 +31,7 @@ export class Productos {
     {
       id: 2,
       nombre: "Illmatic",
+      alt: "Illmatic_Cover",
       descripcion: "Album debut del rapero estadounidense Nas",
       precio: 15,
       stock: 50,
@@ -42,6 +44,7 @@ export class Productos {
     {
       id: 3,
       nombre: "Rompelo Ahí",
+      alt: "RompeloAhi_Cover",
       descripcion: "Album debut del grupo de cumbia turra Argentina 'Los Nota Lokos'",
       precio: 5,
       stock: 250,
@@ -54,6 +57,7 @@ export class Productos {
     {
       id: 4,
       nombre: "Kill At Will",
+      alt: "KillAtWill_Cover",
       descripcion: "EP del rapero estadounidense Ice Cube",
       precio: 20,
       stock: 110,
@@ -66,6 +70,7 @@ export class Productos {
     {
       id: 5,
       nombre: "Caravana",
+      alt: "Caravana_cover",
       descripcion: "Album debut del rapero Argentino Wos",
       precio: 13,
       stock: 50,
@@ -78,6 +83,7 @@ export class Productos {
     {
       id: 6,
       nombre: "Illmatic",
+      alt: "Illmatic_Cover",
       descripcion: "Album debut del rapero estadounidense Nas",
       precio: 13,
       stock: 50,

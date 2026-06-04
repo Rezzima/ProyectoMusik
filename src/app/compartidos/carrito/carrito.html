@@ -33,9 +33,10 @@
                 <th scope="row" colspan="3">Precio Final</th>
                 <td>{{ total }}</td>
             </tr>
-            <tr>
+            <tr class="buttonsContainer">
                 <td colspan="4" style="text-align: right;">
                     <button class="btn btn-success" (click)="carritoComprar()">comprar</button>
+                    <button class="btn btn-danger" (click)="eliminarCarrito()"><i class="bi bi-trash-fill"></i></button>
                 </td>
             </tr>
         </tfoot>
