@@ -1,23 +1,24 @@
-<!-- <div class="d-flex flex-wrap gap-2 cards">
+<div class="container mt-4">
+    <h2>Ofertas</h2>
+
+    @if (ofertasNashe.length === 0) {
+    <p>No hay ofertas todavia</p>
+    } @else {
     <div class="row justify-content-center g-4" style="gap: 1rem">
-        @for (p of Productos;track p.id) {
-            @if(p.precio < 10) {
-                <div class="card" style="width: 18rem;">
-                <div class="card-body">
-                <img src="{{p.imagen}}" alt="placeholder">
+        @for (p of ofertasNashe; track p.precio) {
+        <div class="card" style="width: 18rem; margin: 1rem;">
+            <div class="card-body">
+                <img src="{{p.imagen}}" alt="{{p.alt}}">
                 <h5 class="card-title">{{ p.nombre }}</h5>
                 <p class="card-text">{{ p.descripcion }}</p>
                 <p class="card-text">${{ p.precio }}</p>
-                <div class="row justify-content-center gap-1">
-                    <a href="#" class="btn btn-primary">Comprar</a>
-                    <button type="button" (click)="toggleFavorito(p.id)"
-                        [class]="p.favorito ? 'btn btn-warning' : 'btn btn-outline-warning'">
-                        <i [class]="p.favorito ? 'bi bi-star-fill' : 'bi bi-star'"></i>
-                    </button>
-                </div>
+                <!-- <div class="row justify-content-center gap-1">
+                    <button class="btn btn-success" (click)="agregarCarrito(p)">Agregar al carrito</button>
+                    <button class="btn btn-danger" (click)="elimFav(p.id)">Eliminar Favorito</button>
+                </div> -->
             </div>
         </div>
-            }
         }
     </div>
-</div> -->
+    }
+</div>

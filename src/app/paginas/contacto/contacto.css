@@ -33,3 +33,8 @@ h1 {
 .form-text {
     opacity: 50%;
 }
+
+.containerGeneral {
+    display: flex;
+    justify-content: space-around;
+}

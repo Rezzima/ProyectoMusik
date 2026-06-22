@@ -1,27 +1,40 @@
-<h1 class="Title">Contacto</h1>
-<div class="contactFather">
-    <form id="formContact">
-        <div class="mb-3">
-            <label for="exampleName" class="form-label">Nombre</label>
-            <input type="text" class="form-control" id="exampleName">
+<div class="containerGeneral">
+    <div class="containerContacto">
+        <h1 class="Title">Contacto</h1>
+        <div class="contactFather">
+            <form id="formContact">
+                <div class="mb-3">
+                    <label for="exampleName" class="form-label">Nombre</label>
+                    <input type="text" class="form-control" id="exampleName">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleLastName" class="form-label">Apellido</label>
+                    <input type="text" class="form-control" id="exampleLastName">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleEmail" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="exampleEmail">
+                    <div id="emailHelp" class="form-text">No vamos a divulgar este mail con nadie</div>
+                </div>
+                <div class="mb-3">
+                    <label for="exampleTel" class="form-label">Número telefónico</label>
+                    <input type="tel" class="form-control" id="exampleTel">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleReason" class="form-label">Razón de contacto</label>
+                    <textarea class="form-control" id="exampleReason"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Enviar</button>
+            </form>
         </div>
-        <div class="mb-3">
-            <label for="exampleLastName" class="form-label">Apellido</label>
-            <input type="text" class="form-control" id="exampleLastName">
+    </div>
+    <div class="containerMap">
+        <h1 class="Title">Nuestra Ubicacion</h1>
+        <div class="mapa">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d859.5858264855797!2d-65.06065355246488!3d-30.48303334192574!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x942e7e7e6b8341b1%3A0xae5b139076cd011!2sGuanaco%20Muerto%2C%20C%C3%B3rdoba!5e0!3m2!1ses-419!2sar!4v1782130142724!5m2!1ses-419!2sar"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
-        <div class="mb-3">
-            <label for="exampleEmail" class="form-label">Email</label>
-            <input type="email" class="form-control" id="exampleEmail">
-            <div id="emailHelp" class="form-text">No vamos a divulgar este mail con nadie</div>
-        </div>
-        <div class="mb-3">
-            <label for="exampleTel" class="form-label">Número telefónico</label>
-            <input type="tel" class="form-control" id="exampleTel">
-        </div>
-        <div class="mb-3">
-            <label for="exampleReason" class="form-label">Razón de contacto</label>
-            <textarea class="form-control" id="exampleReason"></textarea>
-        </div>
-        <button type="submit" class="btn btn-primary">Enviar</button>
-    </form>
+    </div>
 </div>

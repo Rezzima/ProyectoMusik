@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Producto } from '../../models/producto';
+import { OfertasServices } from '../../servicios/ofertas-services';
 
 @Component({
   selector: 'app-ofertas',
@@ -7,6 +8,14 @@ import { Producto } from '../../models/producto';
   templateUrl: './ofertas.html',
   styleUrl: './ofertas.css',
 })
-export class Ofertas {
+export class Ofertas implements OnInit {
+  ofertasNashe: Producto[] = [];
   
+ constructor(
+     private ofertasArr: OfertasServices,
+   ){}
+ 
+   ngOnInit(){
+     this.ofertasNashe = this.ofertasArr.obtenerOfertas();
+   }
 }
