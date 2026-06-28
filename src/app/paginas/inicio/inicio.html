@@ -1,19 +1,40 @@
 <div class="containerGeneral">
     <div class="bloqueUno">
         <h2>
-            link1
+            Tienda de musica online
         </h2>
     </div>
     <div class="bloqueDos">
         <h3>
             <span class="link2">
-                link2
+                Barato...
             </span>
         </h3>
         <h3>
             <span class="link3">
-                link3
+                Y de calidad
             </span>
         </h3>
     </div>
 </div>
+<h3>Productos destacados</h3>
+@if (productos.length === 0) {
+<p>No hay productos destacados disponibles.</p>
+} @else {
+<div class="carrusel">
+    <button class="btn-nav" (click)="anterior()" [disabled]="indice === 0">&#8592;</button>
+
+    <div class="cartas">
+        @for (p of productos.slice(indice, indice + visibles); track p.id) {
+        <div class="carta">
+            <img src="{{ p.imagen }}" alt="{{ p.alt }}" />
+            <h4>{{ p.nombre }}</h4>
+            <p>{{ p.categoria }}</p>
+            <span>${{ p.precio }}</span>
+        </div>
+        }
+    </div>
+
+    <button class="btn-nav" (click)="siguiente()">&#8594;</button>
+</div>
+}

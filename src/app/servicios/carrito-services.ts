@@ -33,7 +33,13 @@ export class CarritoServices {
   aumentarCant(id: number) {
     const prod = this.carritoArray.find(p => p.id === id);
     if (prod) {
-      prod.cant++;
+      if (prod.stock <= 0) {
+        prod.cant--;
+        alert("No hay stock suficiente");
+      } else {
+        prod.cant++;
+        prod.stock--;
+      }
       prod.precio;
     }
   }
