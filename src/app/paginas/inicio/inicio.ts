@@ -1,7 +1,6 @@
 import { Component, inject, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Producto } from '../../models/producto';
-import { ProductosService } from '../../servicios/productos-service';
 import { OfertasServices } from '../../servicios/ofertas-services';
 
 @Component({
@@ -12,9 +11,24 @@ import { OfertasServices } from '../../servicios/ofertas-services';
 })
 export class Inicio implements OnInit {
 
+  // Guarda el producto clickeado, o null si no hay modal abierto.
+  productoSeleccionado: Producto | null = null;
+
+  // Cuando se hace click en una carta, guarda ESE producto en la variable.
+  // El @if del HTML detecta que ya no es null y muestra el <dialog>
+  abrirModal(p: Producto) {
+    this.productoSeleccionado = p;
+  }
+
+  // Vuelve la variable a null.
+  // El @if detecta que es null otra vez y el modal desaparece
+  cerrarModal() {
+    this.productoSeleccionado = null;
+  }
+
   // inject() trae el servicio sin necesitar constructor
-  private ofertasService = inject(OfertasServices); 
-  
+  private ofertasService = inject(OfertasServices);
+
   // Array donde se guardan todos los productos cuando carga el componente
   productos: Producto[] = [];
 

@@ -26,7 +26,7 @@
 
     <div class="cartas">
         @for (p of productos.slice(indice, indice + visibles); track p.id) {
-        <div class="carta">
+        <div class="carta" (click)="abrirModal(p)">
             <img src="{{ p.imagen }}" alt="{{ p.alt }}" />
             <h4>{{ p.nombre }}</h4>
             <p>{{ p.categoria }}</p>
@@ -34,6 +34,15 @@
         </div>
         }
     </div>
+
+    @if (productoSeleccionado) {
+    <dialog open>
+        <h3>{{ productoSeleccionado.nombre }}</h3>
+        <p>{{ productoSeleccionado.descripcion }}</p>
+        <p>${{ productoSeleccionado.precio }}</p>
+        <button (click)="cerrarModal()">Cerrar</button>
+    </dialog>
+    }
 
     <button class="btn-nav" (click)="siguiente()">&#8594;</button>
 </div>
