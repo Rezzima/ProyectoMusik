@@ -6,6 +6,10 @@
   height: 15rem;
 }
 
+.carrusel {
+  margin-bottom: 2rem;
+}
+
 .bloqueUno {
   background-color: #343a40;
   width: 100%;
