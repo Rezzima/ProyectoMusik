@@ -10,5 +10,4 @@ export interface Producto{
     dispo: boolean;
     favorito: boolean;
     cant: number;
-    total?: number;
 }

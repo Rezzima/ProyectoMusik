@@ -34,7 +34,7 @@ h1 {
     opacity: 50%;
 }
 
-.containerGeneral {
+.containerMapaYForm {
     display: flex;
     justify-content: space-around;
 }

@@ -23,7 +23,7 @@ export class Productos {
       precio: 23,
       stock: 150,
       imagen: "assets/amerikkkas.png",
-      categoria: "Rap/Hip-Hop",
+      categoria: "Rap",
       dispo: true,
       favorito: false,
       cant: 70
@@ -36,7 +36,7 @@ export class Productos {
       precio: 15,
       stock: 50,
       imagen: "assets/illmatic.png",
-      categoria: "Rap/Hip-Hop",
+      categoria: "Hip-Hop",
       dispo: true,
       favorito: false,
       cant: 150
@@ -62,7 +62,7 @@ export class Productos {
       precio: 20,
       stock: 110,
       imagen: "assets/kill_at_will.png",
-      categoria: "Rap/Hip-Hop",
+      categoria: "Rap",
       dispo: true,
       favorito: false,
       cant: 50
@@ -75,7 +75,7 @@ export class Productos {
       precio: 13,
       stock: 50,
       imagen: "assets/caravana.png",
-      categoria: "Rap/Hip-Hop",
+      categoria: "Hip-Hop",
       dispo: true,
       favorito: false,
       cant: 100
@@ -88,7 +88,7 @@ export class Productos {
       precio: 13,
       stock: 50,
       imagen: "assets/placeholder.png",
-      categoria: "Rap/Hip-Hop",
+      categoria: "Hip-Hop",
       dispo: false,
       favorito: false,
       cant: 0

@@ -6,4 +6,10 @@ import { Component } from '@angular/core';
   templateUrl: './inicio-sesion.html',
   styleUrl: './inicio-sesion.css',
 })
-export class InicioSesion {}
+export class InicioSesion {
+  showPassword = false;
+
+  togglePasswordVisibility() {
+    this.showPassword = !this.showPassword
+  }
+}

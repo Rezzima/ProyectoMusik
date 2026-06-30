@@ -7,8 +7,11 @@
             <div id="emailHelp" class="form-text"></div>
         </div>
         <div class="mb-3">
-            <label for="examplePassword" class="form-label">Contraseña</label>
-            <input type="password" class="form-control" id="examplePassword">
+             <div class="input-group">
+                <input [type]="showPassword ? 'text' : 'password'" class="form-control" id="examplePassword">
+                <button type="button" (click)="togglePasswordVisibility()" style="color: black;"><i
+                        [class]="showPassword ? 'bi bi-eye-fill' : 'bi bi-eye-slash-fill'"></i> </button>
+            </div>
             <div id="passwordHelp" class="form-text-password"> ¿Olvidaste tu contraseña? <a href="" class="resetPassword">Reestablecela acá</a></div>
         </div>
         <button type="submit" class="btn btn-primary">Enviar</button>
