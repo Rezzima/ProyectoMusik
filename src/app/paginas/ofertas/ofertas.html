@@ -1,9 +1,5 @@
 <div class="container mt-4">
     <h2>Ofertas</h2>
-
-    @if (ofertasNashe.length === 0) {
-    <p>No hay ofertas todavia</p>
-    } @else {
     <div class="row justify-content-center g-4" style="gap: 1rem">
         @for (p of ofertasNashe; track p.precio) {
         <div class="card" style="width: 18rem; margin: 1rem;">
@@ -12,13 +8,12 @@
                 <h5 class="card-title">{{ p.nombre }}</h5>
                 <p class="card-text">{{ p.descripcion }}</p>
                 <p class="card-text">${{ p.precio }}</p>
-                <!-- <div class="row justify-content-center gap-1">
-                    <button class="btn btn-success" (click)="agregarCarrito(p)">Agregar al carrito</button>
-                    <button class="btn btn-danger" (click)="elimFav(p.id)">Eliminar Favorito</button>
-                </div> -->
+                <div class="row justify-content-center gap-1">
+                    <button class="btn btn-success" (click)="agregarAlCarrito(p)">Agregar al carrito</button>
+                    <button class="btn btn-danger" (click)="toggleFavorito(p)">Agregar a favoritos</button>
+                </div>
             </div>
         </div>
         }
     </div>
-    }
 </div>

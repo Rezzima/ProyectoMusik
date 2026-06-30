@@ -1,0 +1,31 @@
+<div class="containerFormulario">
+    <form>
+
+        <h3>Datos personales</h3>
+        <input type="text" formControlName="nombre" placeholder="Nombre" />
+        <input type="text" formControlName="apellido" placeholder="Apellido" />
+        <input type="email" formControlName="email" placeholder="Email" />
+        <input type="tel" formControlName="telefono" placeholder="Teléfono" />
+
+        <h3>Domicilio</h3>
+        <input type="text" formControlName="calle" placeholder="Calle y número" />
+        <input type="text" formControlName="ciudad" placeholder="Ciudad" />
+        <input type="text" formControlName="provincia" placeholder="Provincia" />
+        <input type="text" formControlName="cp" placeholder="Código postal" />
+
+        <h3>Pago</h3>
+        <input type="text" formControlName="titular" placeholder="Titular de la tarjeta" />
+        <input type="text" formControlName="numero" placeholder="Número de tarjeta" maxlength="16" />
+        <input type="text" formControlName="venc" placeholder="Vencimiento MM/AA" maxlength="5" />
+        <input type="password" formControlName="cvv" placeholder="CVV" maxlength="4" />
+        <select formControlName="cuotas">
+            <option value="1">1 cuota</option>
+            <option value="3">3 cuotas</option>
+            <option value="6">6 cuotas</option>
+            <option value="12">12 cuotas</option>
+        </select>
+
+        <button type="submit">Confirmar compra</button>
+
+    </form>
+</div>

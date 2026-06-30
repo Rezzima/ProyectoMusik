@@ -28,17 +28,22 @@
             </tr>
             }
         </tbody>
+        @if (productosEnCarrito.length === 0) {
+        <p>No hay productos en el carrito</p>
+        } @else {
         <tfoot class="footerCarrito">
             <tr>
                 <th scope="row" colspan="3">Precio Final</th>
-                <td>{{ total }}</td>
+                <td>${{ total }}</td>
             </tr>
             <tr class="buttonsContainer">
                 <td colspan="4" style="text-align: right;">
-                    <button routerLink="/comprar" routerLinkActive="True" class="btn btn-success" (click)="carritoComprar()" style="margin-right: 15px;">comprar</button>
+                    <button routerLink="/comprar" routerLinkActive="True" class="btn btn-success"
+                        (click)="carritoComprar()" style="margin-right: 15px;">comprar</button>
                     <button class="btn btn-danger" (click)="eliminarCarrito()"><i class="bi bi-trash-fill"></i></button>
                 </td>
             </tr>
         </tfoot>
+        }
     </table>
 </div>
